@@ -1,6 +1,4 @@
 
-b	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(×²”û8á€œœÏ1
-l
-java:S20958"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¨Ý¢„8”È½œÏ1
-n
-java:S1845"QRename field "UPDATE" to prevent any misunderstanding/clash with method "update".(ØóÈµ8…ƒœœÏ1
+g	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(³ºž¼ÿÿÿÿÿ8¸«ÕžÏ1
+q
+java:S20959"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(¾¢¥Êÿÿÿÿÿ8­Ó×žÏ1
