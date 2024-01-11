@@ -1,6 +1,6 @@
 package ru.lukyanov.aspect;
 
-import lombok.extern.slf4j.Slf4j;
+
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -9,8 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 @EnableAspectJAutoProxy
-@Slf4j
-public class Locator {
+public class LocatorPointcut {
     @Pointcut("@within(org.springframework.stereotype.Service)")
     public void isServiceByAnnotation() {
     }
@@ -25,5 +24,13 @@ public class Locator {
 
     @Pointcut("execution(public ru.lukyanov.entity.Customer ru.lukyanov.service.CustomerService.get(Long))")
     public void isServiceByMethodName() {
+    }
+
+    @Pointcut("bean(customerService)")
+    public void isServiceByBeanName() {
+    }
+
+    @Pointcut("isServiceByAnnotation() || within(ru.lukyanov.service.*Customer*)")
+    public void isServiceByAnnotationAndByClassName() {
     }
 }

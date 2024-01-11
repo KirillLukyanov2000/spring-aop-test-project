@@ -13,15 +13,10 @@ public class App {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         CustomerService customerService = context.getBean(CustomerService.class);
-        Customer customer = customerService.get(1L);
-        System.out.println(customer);
+        Customer customer1 = customerService.get(1L);
+        System.out.println(customer1);
 
-//        customer.setPassword("someNewPassword");
-//        System.out.println(customer);
-//
-//        customerService.update(customer);
-//        System.out.print("UPDATED: ");
-//        System.out.println(customer);
+        Customer customer2 = customerService.get(2L);
 
     }
 }
